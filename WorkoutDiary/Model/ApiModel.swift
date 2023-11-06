@@ -24,12 +24,17 @@ struct AuthResponse: Decodable {
     var token: String
 }
 
-struct JournalEntry: Codable {
+struct JournalEntry: Codable, Identifiable {
     var id: String
     var title: String
     var content: String
     var date: String
-    var userId: [String]
+    var userIds: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case title, content, date, userIds
+        case id = "_id"
+    }
 }
 
 

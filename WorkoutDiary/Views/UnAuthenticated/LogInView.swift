@@ -25,7 +25,7 @@ struct LogInView: View {
                            height: geometry.size.height * 0.28,
                            alignment: .center).padding()
                 
-                Text("Welcome to your workout journal!")
+                Text("Welcome to your workout diary!")
                     .bold()
                     .font(.system(size: 24)).padding(.bottom, geometry.size.height * 0.02)
                 
@@ -55,7 +55,6 @@ struct LogInView: View {
                             } catch {
                                 print(error)
                             }
-                            
                         }
                     }
                 }, label: {
@@ -66,11 +65,13 @@ struct LogInView: View {
                         .background(.black)
                         .cornerRadius(9)
                 })
-                
+                //Navigate from LoginView to RegisterView
+                NavigationLink(destination: RegisterView(), label: {
+                    Text("Register account").bold().foregroundColor(.black)
+                })
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
         }
-        
     }
 }
 

@@ -20,7 +20,7 @@ struct RegisterView: View {
     var body: some View {
         
         VStack(spacing: 30) {
-            Text("Register an accound").bold().font(.title).padding()
+            Text("Register an account").bold().font(.title).padding()
             
             VStack(spacing: 20) {
                 

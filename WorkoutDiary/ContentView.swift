@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
-            if let token = journalVM.token {
+            if journalVM.token != nil {
                 NavigationStack {
                     ListView()
                 }
@@ -23,9 +23,6 @@ struct ContentView: View {
                     LogInView()
                 }
             }
-           
-            
-            
         }
         .padding()
     }
