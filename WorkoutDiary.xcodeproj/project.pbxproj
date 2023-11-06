@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D502AF572AF5221B00BFF9CF /* JournalVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF562AF5221B00BFF9CF /* JournalVM.swift */; };
+		D502AF5B2AF526B200BFF9CF /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF5A2AF526B200BFF9CF /* ListView.swift */; };
 		D51EC07E2AEBB31B00999E71 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07D2AEBB31B00999E71 /* LogInView.swift */; };
 		D51EC0802AEBB5CD00999E71 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */; };
 		D51EC0832AEBC3BD00999E71 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC0822AEBC3BD00999E71 /* Api.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D502AF562AF5221B00BFF9CF /* JournalVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalVM.swift; sourceTree = "<group>"; };
+		D502AF5A2AF526B200BFF9CF /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D51EC07D2AEBB31B00999E71 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D51EC0822AEBC3BD00999E71 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -79,11 +83,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D502AF552AF521E900BFF9CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D502AF562AF5221B00BFF9CF /* JournalVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D502AF582AF5264E00BFF9CF /* Authenticated */ = {
+			isa = PBXGroup;
+			children = (
+				D502AF5A2AF526B200BFF9CF /* ListView.swift */,
+			);
+			path = Authenticated;
+			sourceTree = "<group>";
+		};
+		D502AF592AF5266700BFF9CF /* UnAuthenticated */ = {
+			isa = PBXGroup;
+			children = (
+				D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */,
+				D51EC07D2AEBB31B00999E71 /* LogInView.swift */,
+			);
+			path = UnAuthenticated;
+			sourceTree = "<group>";
+		};
 		D51EC07C2AEBB2C700999E71 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D51EC07D2AEBB31B00999E71 /* LogInView.swift */,
-				D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */,
+				D502AF592AF5266700BFF9CF /* UnAuthenticated */,
+				D502AF582AF5264E00BFF9CF /* Authenticated */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +149,7 @@
 		D53CC8182AE2789E0083EAB3 /* WorkoutDiary */ = {
 			isa = PBXGroup;
 			children = (
+				D502AF552AF521E900BFF9CF /* ViewModels */,
 				D51EC0812AEBC38400999E71 /* Model */,
 				D51EC07C2AEBB2C700999E71 /* Views */,
 				D53CC8192AE2789F0083EAB3 /* WorkoutDiaryApp.swift */,
@@ -285,12 +315,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D502AF5B2AF526B200BFF9CF /* ListView.swift in Sources */,
 				D51EC07E2AEBB31B00999E71 /* LogInView.swift in Sources */,
 				D53CC81C2AE2789F0083EAB3 /* ContentView.swift in Sources */,
 				D51EC0802AEBB5CD00999E71 /* RegisterView.swift in Sources */,
 				D51EC0832AEBC3BD00999E71 /* Api.swift in Sources */,
 				D51EC08A2AEBC54D00999E71 /* ApiModel.swift in Sources */,
 				D53CC81A2AE2789F0083EAB3 /* WorkoutDiaryApp.swift in Sources */,
+				D502AF572AF5221B00BFF9CF /* JournalVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

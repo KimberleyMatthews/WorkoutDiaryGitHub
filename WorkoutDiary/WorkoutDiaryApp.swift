@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct WorkoutDiaryApp: App {
+    
+    @StateObject var journalVM = JournalVM()
+    // all the views inside ContentView will have access to this  class
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(journalVM)
         }
     }
 }

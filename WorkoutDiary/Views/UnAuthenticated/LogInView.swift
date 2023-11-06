@@ -10,6 +10,8 @@ import SwiftUI
 
 struct LogInView: View {
     
+    @EnvironmentObject var journalVM: JournalVM
+    
     @State var email = ""
     @State var password = ""
     
@@ -42,17 +44,32 @@ struct LogInView: View {
                 Button(action: {
                     
                     if !email.isEmpty && !password.isEmpty {
-                        // Logga in användaren
+                        
+                        let requestData  = LoginRequest(email: email, password: password)
+                        
+                        Task {
+                            // if success
+                            do {
+                                let _ = try await journalVM.loginApi(requestData: requestData)
+                            // if no success
+                            } catch {
+                                print(error)
+                            }
+                            
+                        }
                     }
                 }, label: {
                     Text("Log in")
+                        .bold()
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.black)
+                        .cornerRadius(9)
                 })
                 
             }
-            
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
-        
-        Text("Enter your credentials").bold().font(.title)
         
     }
 }

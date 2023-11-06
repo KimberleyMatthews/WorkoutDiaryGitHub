@@ -10,6 +10,8 @@ import SwiftUI
 
 struct RegisterView: View {
     
+    @EnvironmentObject var journalVM : JournalVM
+    
     @State var name = ""
     @State var email = ""
     @State var password =  ""
@@ -40,9 +42,18 @@ struct RegisterView: View {
             
             Button(action: {
                 
-                if !email.isEmpty && !password.isEmpty && password == confirmPassword {
+                if !name.isEmpty && !email.isEmpty && !password.isEmpty && password == confirmPassword {
                     
+                    let requestData = RegisterRequest(name: name, email: email, password: password)
                     
+                    Task {
+                        
+                        do {
+                            let _ = try await journalVM.registerApi(requestData: requestData)
+                        } catch {
+                            print(error)
+                        }
+                    }
                     
                 }
             }, label: {

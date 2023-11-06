@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var journalVM: JournalVM
+
     var body: some View {
         VStack {
-        
+            
+            if let token = journalVM.token {
+                NavigationStack {
+                    ListView()
+                }
+            } else {
+                NavigationStack {
+                    LogInView()
+                }
+            }
+           
+            
+            
         }
         .padding()
     }
