@@ -74,4 +74,23 @@ class JournalVM: ObservableObject {
             throw APIErrors.invalidRequestData
         }
     } // func getEntries ends
+    
+    func saveEntry(entry: JournalEntry) async throws {
+        
+        if let token = token {
+            
+            do {
+                let response: JournalEntry = try await api.post(endpoint: "\(api.endpoint)/journal", requestData: entry, token: token)
+                
+                DispatchQueue.main.async {
+                    self.journals.append(response)
+                }
+                
+            } catch {
+                throw error
+            }
+        } else {
+            throw APIErrors.invalidRequestData
+        }
+    }  // func saveEntry ends
 }

@@ -25,7 +25,7 @@ struct AuthResponse: Decodable {
 }
 
 struct JournalEntry: Codable, Identifiable {
-    var id: String
+    var id: String?
     var title: String
     var content: String
     var date: String

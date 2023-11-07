@@ -14,17 +14,14 @@ struct ListView: View {
     var body: some View {
         VStack {
             Text("Journals").font(.title).bold().padding()
-            
-            Button(action: {
-                
-            }, label: {
-                Text("Add entry").bold()
+        
+            NavigationLink(destination: AddEntryView(), label: {
+                Text("Add workout").bold()
             })
             
             List() {
                 ForEach(journalVM.journals) {journal in
                     Text(journal.title)
-                    
                 }
             }// List() ends
         }.task {
@@ -33,7 +30,7 @@ struct ListView: View {
             } catch {
                 print(error)
             }
-        }// some View ends
+        }// View ends
     }
 }
 

@@ -31,8 +31,6 @@ class Api {
             
             let encoder = JSONEncoder()
             
-            encoder.keyEncodingStrategy = .convertToSnakeCase
-            
             do {
                 request.httpBody = try encoder.encode(requestData)
             } catch {
