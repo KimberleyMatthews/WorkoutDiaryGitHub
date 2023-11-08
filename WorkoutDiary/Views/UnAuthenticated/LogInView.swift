@@ -23,14 +23,16 @@ struct LogInView: View {
                 Image("diary").resizable()
                     .frame(width: geometry.size.width * 0.6,
                            height: geometry.size.height * 0.28,
-                           alignment: .center).padding()
+                           alignment: .center).padding().colorInvert()
                 
                 Text("Welcome to your workout diary!")
                     .bold()
                     .font(.system(size: 24)).padding(.bottom, geometry.size.height * 0.02)
                 
                 VStack(alignment: .leading) {
-                    Text("Enter your email and passsword").font(.title3).bold()
+                    Text("Enter your email and passsword")
+                        .font(.title3)
+                        .bold()
                     
                     TextField("Email address", text: $email)
                         .textFieldStyle(.roundedBorder)
@@ -67,9 +69,13 @@ struct LogInView: View {
                 })
                 //Navigate from LoginView to RegisterView
                 NavigationLink(destination: RegisterView(), label: {
-                    Text("Register account").bold().foregroundColor(.black).italic()
+                    Text("Register account")
+                        .bold()
+                        .foregroundColor(.black)
+                        .italic()
                 })
-            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.456, brightness: 0.913))
+            }.frame(width: geometry.size.width, height: geometry.size.height)
+                .background(Color(hue: 0.803, saturation: 0.456, brightness: 0.913))
         }
     }
 }

@@ -12,8 +12,8 @@ struct ContentView: View {
     @EnvironmentObject var journalVM: JournalVM
 
     var body: some View {
+      
         VStack {
-            
             if journalVM.token != nil {
                 NavigationStack {
                     ListView()

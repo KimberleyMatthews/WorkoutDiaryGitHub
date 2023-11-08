@@ -22,6 +22,7 @@
 		D53CC82B2AE278A20083EAB3 /* WorkoutDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC82A2AE278A20083EAB3 /* WorkoutDiaryTests.swift */; };
 		D53CC8352AE278A30083EAB3 /* WorkoutDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC8342AE278A30083EAB3 /* WorkoutDiaryUITests.swift */; };
 		D53CC8372AE278A30083EAB3 /* WorkoutDiaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC8362AE278A30083EAB3 /* WorkoutDiaryUITestsLaunchTests.swift */; };
+		D547CF042AFBD9750094474D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547CF032AFBD9750094474D /* SplashScreenView.swift */; };
 		D5E8368F2AFB94DC0030F525 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */; };
 		D5E836902AFB94DE0030F525 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */; };
 		D5E836912AFB954B0030F525 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF5F2AFA64C900BFF9CF /* AddEntryView.swift */; };
@@ -67,6 +68,7 @@
 		D53CC8302AE278A20083EAB3 /* WorkoutDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53CC8342AE278A30083EAB3 /* WorkoutDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryUITests.swift; sourceTree = "<group>"; };
 		D53CC8362AE278A30083EAB3 /* WorkoutDiaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D547CF032AFBD9750094474D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				D51EC07C2AEBB2C700999E71 /* Views */,
 				D53CC8192AE2789F0083EAB3 /* WorkoutDiaryApp.swift */,
 				D53CC81B2AE2789F0083EAB3 /* ContentView.swift */,
+				D547CF032AFBD9750094474D /* SplashScreenView.swift */,
 				D53CC81D2AE278A20083EAB3 /* Assets.xcassets */,
 				D53CC81F2AE278A20083EAB3 /* Preview Content */,
 			);
@@ -341,6 +344,7 @@
 				D51EC0832AEBC3BD00999E71 /* Api.swift in Sources */,
 				D51EC08A2AEBC54D00999E71 /* ApiModel.swift in Sources */,
 				D502AF602AFA64C900BFF9CF /* AddEntryView.swift in Sources */,
+				D547CF042AFBD9750094474D /* SplashScreenView.swift in Sources */,
 				D53CC81A2AE2789F0083EAB3 /* WorkoutDiaryApp.swift in Sources */,
 				D502AF572AF5221B00BFF9CF /* JournalVM.swift in Sources */,
 			);

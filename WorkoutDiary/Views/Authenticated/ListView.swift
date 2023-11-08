@@ -14,10 +14,13 @@ struct ListView: View {
     var body: some View {
             
             VStack {
-                Text("Workout diary").font(.title).bold()
+                Text("Workout diary")
+                    .font(.title)
+                    .bold()
                 
                 NavigationLink(destination: AddEntryView(), label: {
-                    Text("Add workout").bold()
+                    Text("Add workout")
+                        .bold()
                 })
                 
                 List() {

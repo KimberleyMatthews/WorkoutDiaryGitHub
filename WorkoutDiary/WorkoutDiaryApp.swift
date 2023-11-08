@@ -14,7 +14,8 @@ struct WorkoutDiaryApp: App {
     // all the views inside ContentView will have access to this  class
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(journalVM)
+            SplashScreenView()
+            /*ContentView()*/.environmentObject(journalVM)
         }
     }
 }

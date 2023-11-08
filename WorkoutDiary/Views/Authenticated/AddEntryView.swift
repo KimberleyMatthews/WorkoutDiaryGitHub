@@ -16,7 +16,6 @@ struct AddEntryView: View {
     @State var date = ""
     
     var body: some View {
-            
             VStack {
                 Text("Add new workout").font(.title).bold()
                 
@@ -39,11 +38,9 @@ struct AddEntryView: View {
                             print(error)
                         }
                     }
-                    
                 }, label: {
                     Text("Save").bold()
                 })
-                
             }
     }
 }
@@ -53,3 +50,4 @@ struct AddEntryView: View {
             AddEntryView()
         }
     }
+
