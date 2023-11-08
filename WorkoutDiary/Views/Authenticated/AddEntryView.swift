@@ -16,39 +16,40 @@ struct AddEntryView: View {
     @State var date = ""
     
     var body: some View {
-        
-        VStack {
-            Text("Add new workout").font(.title).bold()
             
             VStack {
-                TextField("Title", text: $title).textFieldStyle(.roundedBorder)
-                TextField("Content", text: $content).textFieldStyle(.roundedBorder)
-                TextField("Date", text: $date).textFieldStyle(.roundedBorder)
+                Text("Add new workout").font(.title).bold()
                 
-            }.padding()
-            
-            Button(action: {
-                
-                let newEntry = JournalEntry(title: title, content: content, date: date, userIds: [])
-                
-                Task {
+                VStack {
+                    TextField("Title", text: $title).textFieldStyle(.roundedBorder)
+                    TextField("Content", text: $content).textFieldStyle(.roundedBorder)
+                    TextField("Date", text: $date).textFieldStyle(.roundedBorder)
                     
-                    do {
-                        try await journalVM.saveEntry(entry: newEntry)
-                    } catch {
-                        print(error)
-                    }
-                }
+                }.padding()
                 
-            }, label: {
-                Text("Save").bold()
-            })
+                Button(action: {
+                    
+                    let newEntry = JournalEntry(title: title, content: content, date: date, userIds: [])
+                    
+                    Task {
+                        
+                        do {
+                            try await journalVM.saveEntry(entry: newEntry)
+                        } catch {
+                            print(error)
+                        }
+                    }
+                    
+                }, label: {
+                    Text("Save").bold()
+                })
+                
+            }
+    }
+}
+    
+    struct AddEntryView_Previews: PreviewProvider {
+        static var previews: some View {
+            AddEntryView()
         }
     }
-}
-
-struct AddEntryView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddEntryView()
-    }
-}

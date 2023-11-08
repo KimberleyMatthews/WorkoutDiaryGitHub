@@ -23,8 +23,7 @@ struct ContentView: View {
                     LogInView()
                 }
             }
-        }
-        .padding()
+        }.padding()
     }
 }
 

@@ -37,7 +37,7 @@ class JournalVM: ObservableObject {
             throw error
         }
         
-    }// login func ends
+    } // login func ends
     
     // Register function
     func registerApi(requestData: RegisterRequest) async throws -> AuthResponse {
@@ -92,5 +92,5 @@ class JournalVM: ObservableObject {
         } else {
             throw APIErrors.invalidRequestData
         }
-    }  // func saveEntry ends
+    } // func saveEntry ends
 }

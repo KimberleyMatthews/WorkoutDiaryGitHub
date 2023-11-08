@@ -22,6 +22,14 @@
 		D53CC82B2AE278A20083EAB3 /* WorkoutDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC82A2AE278A20083EAB3 /* WorkoutDiaryTests.swift */; };
 		D53CC8352AE278A30083EAB3 /* WorkoutDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC8342AE278A30083EAB3 /* WorkoutDiaryUITests.swift */; };
 		D53CC8372AE278A30083EAB3 /* WorkoutDiaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC8362AE278A30083EAB3 /* WorkoutDiaryUITestsLaunchTests.swift */; };
+		D5E8368F2AFB94DC0030F525 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */; };
+		D5E836902AFB94DE0030F525 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */; };
+		D5E836912AFB954B0030F525 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF5F2AFA64C900BFF9CF /* AddEntryView.swift */; };
+		D5E836922AFB954C0030F525 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF5F2AFA64C900BFF9CF /* AddEntryView.swift */; };
+		D5E836932AFB95580030F525 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07D2AEBB31B00999E71 /* LogInView.swift */; };
+		D5E836942AFB95590030F525 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07D2AEBB31B00999E71 /* LogInView.swift */; };
+		D5E836952AFB955C0030F525 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF5A2AF526B200BFF9CF /* ListView.swift */; };
+		D5E836962AFB955D0030F525 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF5A2AF526B200BFF9CF /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,7 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E836912AFB954B0030F525 /* AddEntryView.swift in Sources */,
 				D53CC82B2AE278A20083EAB3 /* WorkoutDiaryTests.swift in Sources */,
+				D5E836952AFB955C0030F525 /* ListView.swift in Sources */,
+				D5E836932AFB95580030F525 /* LogInView.swift in Sources */,
+				D5E8368F2AFB94DC0030F525 /* RegisterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +362,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E836942AFB95590030F525 /* LogInView.swift in Sources */,
+				D5E836902AFB94DE0030F525 /* RegisterView.swift in Sources */,
+				D5E836962AFB955D0030F525 /* ListView.swift in Sources */,
 				D53CC8372AE278A30083EAB3 /* WorkoutDiaryUITestsLaunchTests.swift in Sources */,
 				D53CC8352AE278A30083EAB3 /* WorkoutDiaryUITests.swift in Sources */,
+				D5E836922AFB954C0030F525 /* AddEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
