@@ -68,10 +68,11 @@ struct RegisterView: View {
                         .background(.white)
                         .cornerRadius(9)
                 })
-            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.456, brightness: 0.913)
-            )}
+            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.456, brightness: 0.913, opacity: 0.838))
+            }
         }
     }
+
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()

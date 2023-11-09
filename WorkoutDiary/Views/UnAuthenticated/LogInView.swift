@@ -66,6 +66,7 @@ struct LogInView: View {
                         .foregroundColor(.black)
                         .background(.white)
                         .cornerRadius(9)
+                        .ignoresSafeArea()
                 })
                 //Navigate from LoginView to RegisterView
                 NavigationLink(destination: RegisterView(), label: {
@@ -74,8 +75,7 @@ struct LogInView: View {
                         .foregroundColor(.black)
                         .italic()
                 })
-            }.frame(width: geometry.size.width, height: geometry.size.height)
-                .background(Color(hue: 0.803, saturation: 0.456, brightness: 0.913))
+            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.456, brightness: 0.913, opacity: 0.838))
         }
     }
 }

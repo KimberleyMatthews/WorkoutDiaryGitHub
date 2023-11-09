@@ -15,11 +15,12 @@ struct SplashScreenView: View {
     var body: some View {
         if isActive {
             ContentView()
+            
         } else {
             VStack{
                 VStack{
-                    /*Image("barbell")
-                        .font(.system(size:80))*/
+                    Image("dumbell")
+                        .font(.system(size:80))
                     Text("Workout Diary")
                         .font(Font.custom("Baskerville-Bold", size: 26))
                         .foregroundColor(.black.opacity(0.80))

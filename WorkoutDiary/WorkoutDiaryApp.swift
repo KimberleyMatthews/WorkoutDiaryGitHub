@@ -15,7 +15,8 @@ struct WorkoutDiaryApp: App {
     var body: some Scene {
         WindowGroup {
             SplashScreenView()
-            /*ContentView()*/.environmentObject(journalVM)
+            ContentView()
+                .environmentObject(journalVM)
         }
     }
 }

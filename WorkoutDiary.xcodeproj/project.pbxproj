@@ -117,8 +117,8 @@
 		D502AF592AF5266700BFF9CF /* UnAuthenticated */ = {
 			isa = PBXGroup;
 			children = (
-				D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */,
 				D51EC07D2AEBB31B00999E71 /* LogInView.swift */,
+				D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */,
 			);
 			path = UnAuthenticated;
 			sourceTree = "<group>";

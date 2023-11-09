@@ -12,6 +12,7 @@ struct ListView: View {
     @EnvironmentObject var journalVM: JournalVM
     
     var body: some View {
+        GeometryReader { geometry in
             
             VStack {
                 Text("Workout diary")
@@ -28,14 +29,17 @@ struct ListView: View {
                         Text(journal.title)
                     }
                 }// List() ends
-            }.task {
-                do {
-                    try await journalVM.getEntries()
-                } catch {
-                    print(error)
+            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.456, brightness: 0.913, opacity: 0.838))
+                
+                .task {
+                    do {
+                        try await journalVM.getEntries()
+                    } catch {
+                        print(error)
+                    }
                 }
-        }
-    }// View ends
+        }// View ends
+    }
     
     struct ListView_Previews: PreviewProvider {
         static var previews: some View {
