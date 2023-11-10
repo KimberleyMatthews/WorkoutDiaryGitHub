@@ -18,11 +18,21 @@ struct LogInView: View {
     var body: some View {
         GeometryReader { geometry in
             
+            ZStack{
+                Image("chalkHands")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                    .opacity(1.0)
+                
+            }
+            
             VStack(alignment: .center, spacing: 30) {
                 
                 Image("diary").resizable()
                     .frame(width: geometry.size.width * 0.6,
-                           height: geometry.size.height * 0.28,
+                           height: geometry.size.height * 0.26,
                            alignment: .center).padding().colorInvert()
                 
                 Text("Welcome to your workout diary!")
@@ -66,16 +76,16 @@ struct LogInView: View {
                         .foregroundColor(.black)
                         .background(.white)
                         .cornerRadius(9)
-                        .ignoresSafeArea()
+                        
                 })
                 //Navigate from LoginView to RegisterView
                 NavigationLink(destination: RegisterView(), label: {
                     Text("Register account")
                         .bold()
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                         .italic()
                 })
-            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.456, brightness: 0.913, opacity: 0.838))
+            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.0, brightness: 0.608, opacity: 0.838))
         }
     }
 }

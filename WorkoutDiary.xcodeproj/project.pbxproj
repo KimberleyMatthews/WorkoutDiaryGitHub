@@ -17,12 +17,11 @@
 		D51EC08A2AEBC54D00999E71 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC0892AEBC54D00999E71 /* ApiModel.swift */; };
 		D53CC81A2AE2789F0083EAB3 /* WorkoutDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC8192AE2789F0083EAB3 /* WorkoutDiaryApp.swift */; };
 		D53CC81C2AE2789F0083EAB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC81B2AE2789F0083EAB3 /* ContentView.swift */; };
-		D53CC81E2AE278A20083EAB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53CC81D2AE278A20083EAB3 /* Assets.xcassets */; };
-		D53CC8212AE278A20083EAB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53CC8202AE278A20083EAB3 /* Preview Assets.xcassets */; };
 		D53CC82B2AE278A20083EAB3 /* WorkoutDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC82A2AE278A20083EAB3 /* WorkoutDiaryTests.swift */; };
 		D53CC8352AE278A30083EAB3 /* WorkoutDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC8342AE278A30083EAB3 /* WorkoutDiaryUITests.swift */; };
 		D53CC8372AE278A30083EAB3 /* WorkoutDiaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC8362AE278A30083EAB3 /* WorkoutDiaryUITestsLaunchTests.swift */; };
 		D547CF042AFBD9750094474D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547CF032AFBD9750094474D /* SplashScreenView.swift */; };
+		D5C6AE5E2AFE1CE7000E178B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C6AE5D2AFE1CE7000E178B /* Assets.xcassets */; };
 		D5E8368F2AFB94DC0030F525 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */; };
 		D5E836902AFB94DE0030F525 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */; };
 		D5E836912AFB954B0030F525 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF5F2AFA64C900BFF9CF /* AddEntryView.swift */; };
@@ -61,14 +60,13 @@
 		D53CC8162AE2789E0083EAB3 /* WorkoutDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53CC8192AE2789F0083EAB3 /* WorkoutDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryApp.swift; sourceTree = "<group>"; };
 		D53CC81B2AE2789F0083EAB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D53CC81D2AE278A20083EAB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D53CC8202AE278A20083EAB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D53CC8262AE278A20083EAB3 /* WorkoutDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53CC82A2AE278A20083EAB3 /* WorkoutDiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryTests.swift; sourceTree = "<group>"; };
 		D53CC8302AE278A20083EAB3 /* WorkoutDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53CC8342AE278A30083EAB3 /* WorkoutDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryUITests.swift; sourceTree = "<group>"; };
 		D53CC8362AE278A30083EAB3 /* WorkoutDiaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D547CF032AFBD9750094474D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		D5C6AE5D2AFE1CE7000E178B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +168,6 @@
 				D53CC8192AE2789F0083EAB3 /* WorkoutDiaryApp.swift */,
 				D53CC81B2AE2789F0083EAB3 /* ContentView.swift */,
 				D547CF032AFBD9750094474D /* SplashScreenView.swift */,
-				D53CC81D2AE278A20083EAB3 /* Assets.xcassets */,
 				D53CC81F2AE278A20083EAB3 /* Preview Content */,
 			);
 			path = WorkoutDiary;
@@ -179,7 +176,7 @@
 		D53CC81F2AE278A20083EAB3 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				D53CC8202AE278A20083EAB3 /* Preview Assets.xcassets */,
+				D5C6AE5D2AFE1CE7000E178B /* Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -311,8 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D53CC8212AE278A20083EAB3 /* Preview Assets.xcassets in Resources */,
-				D53CC81E2AE278A20083EAB3 /* Assets.xcassets in Resources */,
+				D5C6AE5E2AFE1CE7000E178B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

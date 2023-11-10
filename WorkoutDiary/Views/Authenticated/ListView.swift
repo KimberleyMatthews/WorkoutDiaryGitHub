@@ -14,6 +14,15 @@ struct ListView: View {
     var body: some View {
         GeometryReader { geometry in
             
+            ZStack{
+                Image("chalkHands")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                    .opacity(1.0)
+            }
+            
             VStack {
                 Text("Workout diary")
                     .font(.title)
@@ -22,6 +31,7 @@ struct ListView: View {
                 NavigationLink(destination: AddEntryView(), label: {
                     Text("Add workout")
                         .bold()
+                        .foregroundColor(.white)
                 })
                 
                 List() {
@@ -29,8 +39,8 @@ struct ListView: View {
                         Text(journal.title)
                     }
                 }// List() ends
-            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.456, brightness: 0.913, opacity: 0.838))
-                
+            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.0, brightness: 0.608, opacity: 0.838))
+
                 .task {
                     do {
                         try await journalVM.getEntries()
