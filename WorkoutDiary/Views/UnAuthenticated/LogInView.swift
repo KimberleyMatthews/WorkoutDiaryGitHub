@@ -37,7 +37,7 @@ struct LogInView: View {
                 
                 Text("Welcome to your workout diary!")
                     .bold()
-                    .font(.system(size: 24)).padding(.bottom, geometry.size.height * 0.02)
+                    .font(.system(size: 22)).padding(.bottom, geometry.size.height * 0.02)
                 
                 VStack(alignment: .leading) {
                     Text("Enter your email and passsword")
