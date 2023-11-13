@@ -6,32 +6,29 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct ContentView: View {
     
-    @EnvironmentObject var journalVM: JournalVM
-
+    @StateObject var db = FirebaseConnection()
+    @State var workouts = [Workout]()
+    
     var body: some View {
-      
-        VStack {
-            if journalVM.token != nil {
-                NavigationStack {
-                    ListView()
-                }
-            } else {
-                NavigationStack {
-                    LogInView()
-                }
+        
+        if let user = db.currentUser {
+            NavigationStack {
+                ListView(db: db)
             }
-        }.padding()
-    }
-}
+        } else {
+            NavigationStack {
+                LogInView(db: db)
+            }
+        }
+    }}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .environmentObject(JournalVM())
-            .ignoresSafeArea(.all)
+        ContentView(db: FirebaseConnection())
             
     }
 }

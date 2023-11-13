@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LogInView: View {
     
-    @EnvironmentObject var journalVM: JournalVM
+    @ObservedObject var db: FirebaseConnection
     
     @State var email = ""
     @State var password = ""
@@ -56,18 +56,7 @@ struct LogInView: View {
                 Button(action: {
                     
                     if !email.isEmpty && !password.isEmpty {
-                        
-                        let requestData  = LoginRequest(email: email, password: password)
-                        
-                        Task {
-                            // if success
-                            do {
-                                let _ = try await journalVM.loginApi(requestData: requestData)
-                            // if no success
-                            } catch {
-                                print(error)
-                            }
-                        }
+                        // Logga in användaren
                     }
                 }, label: {
                     Text("Log in")
@@ -79,7 +68,7 @@ struct LogInView: View {
                         
                 })
                 //Navigate from LoginView to RegisterView
-                NavigationLink(destination: RegisterView(), label: {
+                NavigationLink(destination: RegisterView(db: db), label: {
                     Text("Register account")
                         .bold()
                         .foregroundColor(.white)
@@ -92,6 +81,6 @@ struct LogInView: View {
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
-        LogInView()
+        LogInView(db: FirebaseConnection())
     }
 }

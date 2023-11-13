@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 struct RegisterView: View {
-    
-    @EnvironmentObject var journalVM : JournalVM
+
+    @ObservedObject var db: FirebaseConnection
     
     @State var name = ""
     @State var email = ""
@@ -64,15 +64,10 @@ struct RegisterView: View {
                     
                     if !name.isEmpty && !email.isEmpty && !password.isEmpty && password == confirmPassword {
                         
-                        let requestData = RegisterRequest(name: name, email: email, password: password)
+                        let isSuccess = db.RegisterUser(email: email, password: password)
                         
-                        Task {
-                            
-                            do {
-                                let _ = try await journalVM.registerApi(requestData: requestData)
-                            } catch {
-                                print(error)
-                            }
+                        if !isSuccess {
+                            print("Failed to create account")
                         }
                         
                     }
@@ -92,6 +87,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterView(db: FirebaseConnection())
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Api {
+/*class Api {
     
     let endpoint = "http://192.71.151.213/iad22"
     
@@ -93,4 +93,4 @@ enum APIErrors: Error {
         case invalidResponse
         case invalidRequestData
         case invalidResponseData
-}
+}*/

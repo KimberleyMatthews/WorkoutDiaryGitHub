@@ -7,7 +7,7 @@
 
 import Foundation
 import KeychainSwift
-
+/*
 class JournalVM: ObservableObject {
     
     let api = Api()
@@ -93,4 +93,4 @@ class JournalVM: ObservableObject {
             throw APIErrors.invalidRequestData
         }
     } // func saveEntry ends
-}
+}*/

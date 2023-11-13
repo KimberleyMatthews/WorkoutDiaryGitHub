@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    @EnvironmentObject var journalVM: JournalVM
+    @ObservedObject var db: FirebaseConnection
     
     var body: some View {
         GeometryReader { geometry in
@@ -23,37 +23,49 @@ struct ListView: View {
                     .opacity(1.0)
             }
             
-            VStack {
-                Text("Workout diary")
-                    .font(.title)
-                    .bold()
-                
-                NavigationLink(destination: AddEntryView(), label: {
-                    Text("Add workout")
-                        .bold()
-                        .foregroundColor(.white)
-                })
-                
-                List() {
-                    ForEach(journalVM.journals) {journal in
-                        Text(journal.title)
-                    }
-                }// List() ends
-            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.0, brightness: 0.608, opacity: 0.838))
+            NavigationStack {
+                VStack {
+                    
+                    Text("Workouts").font(.title).bold().padding()
+                    
+                    if let userData = db.currentUserData {
+                        
+                        if userData.workouts.count < 1 {
+                            Text("No workouts yet!")
+                        } else {
+                            List() {
+                                ForEach(userData.workouts) { workout in
+                                    Text(workout.name)
+                                }
+                            }.scrollContentBackground(.hidden)
+                        }
 
-                .task {
-                    do {
-                        try await journalVM.getEntries()
-                    } catch {
-                        print(error)
+                        
+                    } else {
+                        Text("Unexpected error, please contact your administrator.")
+                        
                     }
-                }
+                
+                    NavigationLink(destination: AddEntryView(db: db), label: {
+                        Text("Add Workout").bold().padding().foregroundColor(.black).background(.white).cornerRadius(9)
+                    })
+                    Button(action: {
+                        db.LogOut()
+                    }, label: {
+                        Text("Log out").bold().padding().foregroundColor(.black).background(.white).cornerRadius(9)})
+                  
+                 
+                    
+                }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.0, brightness: 0.608, opacity: 0.838))
+                
+            }
+            }
         }// View ends
     }
     
     struct ListView_Previews: PreviewProvider {
         static var previews: some View {
-            ListView().environmentObject(JournalVM())
+            ListView(db: FirebaseConnection())
         }
     }
-}
+

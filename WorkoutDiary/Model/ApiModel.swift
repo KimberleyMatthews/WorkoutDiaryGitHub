@@ -7,7 +7,7 @@
 
 import Foundation
 // login
-struct LoginRequest: Encodable {
+/*struct LoginRequest: Encodable {
     var email: String
     var password: String
     }
@@ -37,4 +37,4 @@ struct JournalEntry: Codable, Identifiable {
     }
 }
 
-
+*/

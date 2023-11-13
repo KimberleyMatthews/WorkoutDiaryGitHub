@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct AddEntryView: View {
     
-    @EnvironmentObject var journalVM: JournalVM
+    @Environment(\.dismiss) private var dismiss
+    @ObservedObject var db: FirebaseConnection
     
-    @State var title = ""
+    @State var name = ""
     @State var content = ""
     @State var date = ""
     
@@ -36,7 +38,7 @@ struct AddEntryView: View {
                 Text("Add new workout").font(.title).bold()
                 
                 VStack {
-                    TextField("Title", text: $title).textFieldStyle(.roundedBorder)
+                    TextField("Title", text: $name).textFieldStyle(.roundedBorder)
                     TextField("Content", text: $content).textFieldStyle(.roundedBorder)
                     TextField("Date", text: $date).textFieldStyle(.roundedBorder)
                     
@@ -44,16 +46,10 @@ struct AddEntryView: View {
     
                 Button(action: {
                     
-                    let newEntry = JournalEntry(title: title, content: content, date: date, userIds: [])
+                    let newWorkout = Workout(name: name, content: content, date: date)
+                    db.addWorkoutToDb(workout: newWorkout)
+                    dismiss()
                     
-                    Task {
-                        
-                        do {
-                            try await journalVM.saveEntry(entry: newEntry)
-                        } catch {
-                            print(error)
-                        }
-                    }
                 }, label: {
                     Text("Save")
                         .bold()
@@ -70,7 +66,7 @@ struct AddEntryView: View {
     
     struct AddEntryView_Previews: PreviewProvider {
         static var previews: some View {
-            AddEntryView()
+            AddEntryView(db: FirebaseConnection())
         }
     }
 
