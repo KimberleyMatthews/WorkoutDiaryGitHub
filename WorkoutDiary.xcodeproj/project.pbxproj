@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D502AF572AF5221B00BFF9CF /* JournalVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF562AF5221B00BFF9CF /* JournalVM.swift */; };
 		D502AF5B2AF526B200BFF9CF /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF5A2AF526B200BFF9CF /* ListView.swift */; };
 		D502AF5E2AF8D56600BFF9CF /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D502AF5D2AF8D56600BFF9CF /* KeychainSwift */; };
 		D502AF602AFA64C900BFF9CF /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502AF5F2AFA64C900BFF9CF /* AddEntryView.swift */; };
@@ -18,8 +17,6 @@
 		D513B4E92B02556A004B2C8B /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D513B4E82B02556A004B2C8B /* FirebaseFirestoreCombine-Community */; };
 		D51EC07E2AEBB31B00999E71 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07D2AEBB31B00999E71 /* LogInView.swift */; };
 		D51EC0802AEBB5CD00999E71 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */; };
-		D51EC0832AEBC3BD00999E71 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC0822AEBC3BD00999E71 /* Api.swift */; };
-		D51EC08A2AEBC54D00999E71 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC0892AEBC54D00999E71 /* ApiModel.swift */; };
 		D53CC81A2AE2789F0083EAB3 /* WorkoutDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC8192AE2789F0083EAB3 /* WorkoutDiaryApp.swift */; };
 		D53CC81C2AE2789F0083EAB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC81B2AE2789F0083EAB3 /* ContentView.swift */; };
 		D53CC82B2AE278A20083EAB3 /* WorkoutDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CC82A2AE278A20083EAB3 /* WorkoutDiaryTests.swift */; };
@@ -59,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D502AF562AF5221B00BFF9CF /* JournalVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalVM.swift; sourceTree = "<group>"; };
 		D502AF5A2AF526B200BFF9CF /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D502AF5F2AFA64C900BFF9CF /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryView.swift; sourceTree = "<group>"; };
 		D513B4DF2B0241DA004B2C8B /* FirebaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConnection.swift; sourceTree = "<group>"; };
@@ -67,8 +63,6 @@
 		D513B4E32B0247D9004B2C8B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		D51EC07D2AEBB31B00999E71 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		D51EC07F2AEBB5CD00999E71 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		D51EC0822AEBC3BD00999E71 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
-		D51EC0892AEBC54D00999E71 /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		D53CC8162AE2789E0083EAB3 /* WorkoutDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53CC8192AE2789F0083EAB3 /* WorkoutDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryApp.swift; sourceTree = "<group>"; };
 		D53CC81B2AE2789F0083EAB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,14 +107,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D502AF552AF521E900BFF9CF /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				D502AF562AF5221B00BFF9CF /* JournalVM.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		D502AF582AF5264E00BFF9CF /* Authenticated */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,8 +145,6 @@
 		D51EC0812AEBC38400999E71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D51EC0822AEBC3BD00999E71 /* Api.swift */,
-				D51EC0892AEBC54D00999E71 /* ApiModel.swift */,
 				D513B4DF2B0241DA004B2C8B /* FirebaseConnection.swift */,
 				D513B4E12B02472F004B2C8B /* UserData.swift */,
 				D513B4E32B0247D9004B2C8B /* Workout.swift */,
@@ -193,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				D56C675D2AFFE13D0022C610 /* GoogleService-Info.plist */,
-				D502AF552AF521E900BFF9CF /* ViewModels */,
 				D51EC0812AEBC38400999E71 /* Model */,
 				D51EC07C2AEBB2C700999E71 /* Views */,
 				D53CC8192AE2789F0083EAB3 /* WorkoutDiaryApp.swift */,
@@ -376,14 +359,11 @@
 				D53CC81C2AE2789F0083EAB3 /* ContentView.swift in Sources */,
 				D513B4E42B0247D9004B2C8B /* Workout.swift in Sources */,
 				D51EC0802AEBB5CD00999E71 /* RegisterView.swift in Sources */,
-				D51EC0832AEBC3BD00999E71 /* Api.swift in Sources */,
 				D513B4E02B0241DA004B2C8B /* FirebaseConnection.swift in Sources */,
 				D513B4E22B02472F004B2C8B /* UserData.swift in Sources */,
-				D51EC08A2AEBC54D00999E71 /* ApiModel.swift in Sources */,
 				D502AF602AFA64C900BFF9CF /* AddEntryView.swift in Sources */,
 				D547CF042AFBD9750094474D /* SplashScreenView.swift in Sources */,
 				D53CC81A2AE2789F0083EAB3 /* WorkoutDiaryApp.swift in Sources */,
-				D502AF572AF5221B00BFF9CF /* JournalVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

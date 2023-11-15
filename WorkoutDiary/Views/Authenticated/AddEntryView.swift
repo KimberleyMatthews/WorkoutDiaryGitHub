@@ -30,12 +30,17 @@ struct AddEntryView: View {
             }
             VStack {
                 
-                Image("diary").resizable()
+                Image("diary")
+                    .resizable()
                     .frame(width: geometry.size.width * 0.6,
                            height: geometry.size.height * 0.26,
-                           alignment: .center).padding().colorInvert()
+                           alignment: .center)
+                    .padding()
+                    .colorInvert()
                 
-                Text("Add new workout").font(.title).bold()
+                Text("Add new workout:")
+                    .font(.title)
+                    .bold()
                 
                 VStack {
                     TextField("Title", text: $name).textFieldStyle(.roundedBorder)

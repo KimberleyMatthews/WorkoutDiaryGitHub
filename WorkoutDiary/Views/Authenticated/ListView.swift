@@ -26,7 +26,10 @@ struct ListView: View {
             NavigationStack {
                 VStack {
                     
-                    Text("Workouts").font(.title).bold().padding()
+                    Text("Saved workouts")
+                        .font(.title)
+                        .bold()
+                        .padding()
                     
                     if let userData = db.currentUserData {
                         
@@ -40,21 +43,23 @@ struct ListView: View {
                             }.scrollContentBackground(.hidden)
                         }
 
-                        
                     } else {
                         Text("Unexpected error, please contact your administrator.")
-                        
                     }
                 
                     NavigationLink(destination: AddEntryView(db: db), label: {
-                        Text("Add Workout").bold().padding().foregroundColor(.black).background(.white).cornerRadius(9)
+                        Text("Add Workout")
+                            .bold().padding().foregroundColor(.black).background(.white).cornerRadius(9)
                     })
                     Button(action: {
                         db.LogOut()
                     }, label: {
-                        Text("Log out").bold().padding().foregroundColor(.black).background(.white).cornerRadius(9)})
-                  
-                 
+                        Text("Log out")
+                            .bold()
+                            .padding()
+                        .foregroundColor(.black)
+                        .background(.white)
+                        .cornerRadius(9)})
                     
                 }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.0, brightness: 0.608, opacity: 0.838))
                 

@@ -31,9 +31,6 @@ class FirebaseConnection: ObservableObject {
                 print("A user has logged in with email: \(user.email ?? "No Email")")
                 
                 self.currentUser = user
-                
-                
-                
                 self.startListeningToDb()
                 
             } else {
@@ -47,15 +44,9 @@ class FirebaseConnection: ObservableObject {
                 print("User has logged out!")
                 
             }
-            
         }
-        
     }
 
-    
-    /*
-    Vi sätter en lyssnare på våran collection "restaurants". Vid minsta förändring i någon av dokumenten som finns i våran collection, så kommer den här funktionen att kallas på. En kopia ("snapshot") tas av hela kollektionen efter förändringen och skickas in som en parameter till funktionen nedan. Vi har då möjlighet att kunna ta del av förändringarna och anpassa våran app utefter det.
-     */
     func startListeningToDb() {
         
         guard let user = currentUser else {return}
@@ -97,7 +88,6 @@ class FirebaseConnection: ObservableObject {
             if let authResult = authResult {
                 
                 // Skapa en UserData dokument i databasen
-                
                 let newUserData = UserData(workouts: [])
                 
                 do {
@@ -108,13 +98,9 @@ class FirebaseConnection: ObservableObject {
                 
                 print("Account successfully created!")
                 success = true
-                
             }
-            
         }
-        
         return success
-        
     }
     
     func LoginUser(email: String, password: String) -> Bool {
@@ -129,30 +115,22 @@ class FirebaseConnection: ObservableObject {
             }
             
             if let _ = authDataResult {
-                
                 print("Successfully logged in!")
                 success = true
             }
-            
         }
-        
         return success
-
     }
     
     func addWorkoutToDb(workout: Workout) {
         if let currentUser = currentUser {
             
             do {
-   
                 try db.collection(USER_DATA_COLLECTION).document(currentUser.uid).updateData(["workouts": FieldValue.arrayUnion([Firestore.Encoder().encode(workout)])])
-                
             } catch {
-                
              print("Error adding workout")
+                
             }
-            
-            
         }
     }
     
@@ -160,10 +138,8 @@ class FirebaseConnection: ObservableObject {
         
         do {
             try auth.signOut()
-        }catch {
+        } catch {
             print("Error signing out")
         }
-        
     }
-    
 }

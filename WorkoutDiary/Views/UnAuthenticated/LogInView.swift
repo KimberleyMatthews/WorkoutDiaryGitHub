@@ -30,14 +30,23 @@ struct LogInView: View {
             
             VStack(alignment: .center, spacing: 30) {
                 
-                Image("diary").resizable()
+                Image("diary")
+                    .resizable()
                     .frame(width: geometry.size.width * 0.6,
                            height: geometry.size.height * 0.26,
                            alignment: .center).padding().colorInvert()
                 
                 Text("Welcome to your workout diary!")
                     .bold()
-                    .font(.system(size: 22)).padding(.bottom, geometry.size.height * 0.02)
+                    .font(.system(size: 22))
+                    .padding(
+                        .bottom, geometry.size.height * -0.03)
+                
+                Text("Let's get to work")
+                    .italic()
+                    .font(.system(size: 20))
+                    .padding(
+                        .bottom, geometry.size.height * 0.02)
                 
                 VStack(alignment: .leading) {
                     Text("Enter your email and passsword")
@@ -73,6 +82,8 @@ struct LogInView: View {
                         .bold()
                         .foregroundColor(.white)
                         .italic()
+                        .padding(
+                            .top, geometry.size.height * -0.02)
                 })
             }.frame(width: geometry.size.width, height: geometry.size.height).background(Color(hue: 0.803, saturation: 0.0, brightness: 0.608, opacity: 0.838))
         }
